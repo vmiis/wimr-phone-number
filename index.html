@@ -31,7 +31,7 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.01,0.01]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.02,0.01]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
@@ -99,8 +99,8 @@
                 
                 if(m_name!=undefined){ $vm.active_id=$vm.module_list[m_name].id; $vm.active_name=m_name; }
                 if($vm.active_id!='') $('#D'+$vm.active_id).css('min-height',$vm.min_height+"px");
-                if(m_name=='home') {$("#header").css("background","rgba(0,0,0,0.5)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
-                else               {$("#header").css("background","rgba(0,0,0,0.8)");  $('#midi_buttons').hide(); $('#g_nav').show();}
+                if(m_name=='home') {$("#header").css("background","rgba(255,255,255,1.0)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
+                else               {$("#header").css("background","rgba(255,255,255,1.0)");  $('#midi_buttons').hide(); $('#g_nav').show();}
             }
             //---------------------------------------------
             document.getElementById('layout').onscroll = function(){
@@ -228,7 +228,7 @@
                 var y=-$(window).scrollTop()/3;
                 $('body').css({ 'background-position-y': y+'px'});
                 var r=-y/100; if(r>0.5) r=0.5;
-                $("#header").css("background","rgba(0,0,0,"+r+")");
+                //$("#header").css("background","rgba(0,0,0,"+r+")");
             }
             //=================================================
         });
