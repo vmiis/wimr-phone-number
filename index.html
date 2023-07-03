@@ -23,7 +23,7 @@
         <script>$vm={};</script>
     </head>
     <body>
-        <div id=layout>
+        <div id=layout style="display:none">
             <div id=header></div>
             <div id=content></div>
             <div id=footer style='height:24px'></div>
@@ -101,6 +101,7 @@
                 if($vm.active_id!='') $('#D'+$vm.active_id).css('min-height',$vm.min_height+"px");
                 if(m_name=='home') {$("#header").css("background","rgba(255,255,255,1.0)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
                 else               {$("#header").css("background","rgba(255,255,255,1.0)");  $('#midi_buttons').hide(); $('#g_nav').show();}
+                $('#layout').css('display','block')
             }
             //---------------------------------------------
             document.getElementById('layout').onscroll = function(){
